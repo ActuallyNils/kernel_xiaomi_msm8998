@@ -114,6 +114,12 @@ dtb-$(CONFIG_ARCH_MSM8996) += msm8996-v2-pmi8994-cdp.dtb \
 	apq8096-v3-pmi8996-mdm9x55-slimbus-mtp.dtb \
 	apq8096-v3-pmi8996-dragonboard.dtb
 
+ifeq ($(CONFIG_MACH_SAGIT),y)
+dtb-$(CONFIG_ARCH_MSM8998) += \
+	sagit-msm8998-mtp.dtb \
+	sagit-msm8998-v2-mtp.dtb \
+	sagit-msm8998-v2.1-mtp.dtb
+else
 dtb-$(CONFIG_MSM_GVM_QUIN) += vplatform-lfv-msm8996.dtb
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
